@@ -1,0 +1,50 @@
+{% extends 'home.html' %}
+{% block content %}
+<h1>Edit {{user.first_name}} {{user.last_name}} Profile</h1>
+<form method="POST">
+    <div>
+    <div>
+        <p>
+        <div>
+            <label for="first_name">First Name</label>
+
+            <div>
+                <input type="text" id="first_name" name="first_name" value="{{ user.first_name }}">
+            </div>
+            
+        </div>
+        </p>
+    </div>
+    <div>
+        <p>
+        <div>
+            <label for="last_name">Last Name</label>
+
+            <div>
+                <input type="text" id="last_name" name="last_name" value="{{ user.last_name }}">
+            </div>
+            
+        </div>
+        </p>
+    </div>
+    <div>
+        <p>
+        <div>
+            <label for="image_url">Image Url</label>
+
+            <div>
+                <input type="text" id="image_url" name="image_url" value="{{ user.image_url }}">
+            </div>
+            
+        </div>
+        </p>
+    </div>
+    </div>
+    <div>
+        <a href="/user">Cancel</a>
+        
+        <button type="submit">Save</button>
+    </div>
+</form>
+
+{% endblock %}

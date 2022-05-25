@@ -1,0 +1,17 @@
+{% extends 'home.html' %}
+{% block content %}
+
+<h1>tags</h1>
+<div>
+    <ul>
+        {% for tag in tags %}
+        <li><a href="/tags/{{tag.id}}">{{tag.name}}</a></li>
+        {% endfor %}
+    </ul>
+    <form action="">
+    <button class="btn btn-danger"
+                formmethod="GET"
+                formaction="/tags/new">Add tag</button>
+      </form>
+</div>
+{% endblock %}

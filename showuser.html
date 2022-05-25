@@ -1,0 +1,14 @@
+{% extends 'home.html' %}
+{% block content %}
+    <h1>All Users</h1>
+    <ul>
+        {% for user in users %}
+        <li><a href="/user/{{user.id}}">{{user.first_name}} {{user.last_name}}</a></li>
+        {% endfor %}
+    </ul>
+
+    <form action="/user/newuser">
+        <button>Create User</button>
+    </form>
+  
+{% endblock %}
